@@ -1,5 +1,4 @@
 #include <iostream>
-//#include <tclTomMath.h>
 #include <tommath>
 
 struct coord{
@@ -23,7 +22,7 @@ void put_in_dot_val (coord* c, mp_int* x, mp_int* y, mp_int* z)
     mp_copy (z, &(c->z));
 }
 
-//добавить struct перед каждым coord??
+
 void addition(coord* c1, coord* c2, coord* c3, mp_int modulo){
     mp_int t1, t2, t3, t4, t5, t6, t7;
     mp_init_copy (&t1, &(c1->x));
@@ -214,7 +213,7 @@ int main() {
     mp_init(&z);
     mp_init(&m);
     mp_read_radix(&p, "115792089237316195423570985008687907853269984665640564039457584007913111864739",
-                  10);//зачитали в р число большое
+                  10);
     mp_read_radix(&x, "93528601524582384978654134272795468222405403055717890280271688132874849008326", 10);
     mp_read_radix(&y, "14443324612566128911211262381388707474030458136470034119105598903952521080679", 10);
     mp_set (&d, 3);
